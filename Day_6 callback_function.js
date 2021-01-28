@@ -11,10 +11,10 @@ function morning(callback)
 morning(greeting)
 
 //visiting card details
+<script>
 class visitingCardDetails
 {
-    
-    constructor(name , mail , mobnumber , comname , designation , address)
+    constructor(name , mail,mobnumber,comname,designation,address)
     {
         this.Name = name
         this.mailid = mail
@@ -23,71 +23,66 @@ class visitingCardDetails
         this.designation = designation 
         this.address =  address 
    }
-   set_name(name , callback)
+   set_name(name ,callback)
    {
        this.Name = name
-       callback()
+       callback(this)
    }
-   get_name()
+   get_name(p)
    {
-    document.writeln(this.Name)
+       document.write(p.Name)
    }
-
+   
    set_mailid(mailid , callback)
    {
        this.mailid = mailid
-       callback()
+       callback(this)
    }
-   get_mailid()
+   get_mailid(q)
    {
-    console.log(this.mailid)
+      document.write(q.mailid)
    }
-
    set_contactno(contactno , callback)
    {
        this.contactno = contactno
-       callback()
+       callback(this)
    }
-   get_contactno()
+   get_contactno(r)
    {
-    console.log(this.contactno)
+       document.write(r.contactno)
    }
-
    set_companyname(companyname , callback)
    {
        this.companyname = companyname
-       callback()
+       callback(this)
    }
-   get_companyname()
+   get_companyname(s)
    {
-    console.log(this.companyname)
+       document.write(s.companyname)
    }
    set_designation(designation , callback)
    {
        this.designation = designation
-       callback()
+       callback(this)
    }
-   get_designation()
+   get_designation(t)
    {
-    console.log(this.designation)
+       document.write(t.designation)
    }
-
    set_address(address , callback)
    {
        this.address = address
-       callback()
+       callback(this)
    }
-   get_address()
+   get_address(u)
    {
-    console.log(this.address)
+       document.write(u.address)
    }
 }
-
 let employee = new visitingCardDetails("Mahesh", "mahesh@gmail.com" , 9876543210 , "JVT" , "ASE" , "Gachibowli")
-employee.set_name("Madhusudan" , employee.get)
+employee.set_name("Madhusudan",employee.get_name)
 employee.set_mailid("Madhu@intimetec.com" , employee.get_mailid)
 employee.set_contactno("9876543210" , employee.get_contactno)
 employee.set_designation("ASE" , employee.get_designation)
-employee.set_address("Marathahalli" , employee.get_address)
 
 </script>
