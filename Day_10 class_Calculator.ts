@@ -1,4 +1,4 @@
-class Calculator
+class Calculatorr
 {
     
     Num1 : number;
@@ -9,63 +9,63 @@ class Calculator
         this.Num1  = num1
         this.Num2 = num2
     }
-    sum () : number
+    sum () 
     {
         return this.Num1+this.Num2;
     }
-    sub () : number
+    sub () 
     {
         return this.Num1-this.Num2;
     }
-    mul () : number
+    mul () : any
     {
         return this.Num1*this.Num2;
     }
-    div () : number
+    div () : any
     {
         return this.Num1/this.Num2;
     }
-    mod_remainder () : number
+    mod_remainder () : any
     {
         return this.Num1%this.Num2;
     }
-    percentage() : number
+    percentage() : any
     {
         return (this.Num1 / this.Num2) * 100;
     }
-    profit_percentage() : number
+    profit_percentage() : any
     {
         return 100 * this.Num1 / (this.Num2 + this.Num1)
     }
-    loss_percentage() : number
+    loss_percentage() : any
     {
         return 100 * (this.Num2-this.Num1) / (this.Num2 + this.Num1)
     }
-    AND() : number
+    AND() : any
     {
         return (this.Num2 & this.Num1)
     }
-    NAND() : number
+    NAND() : any
     {
         return ~(this.Num2 & this.Num1)
     }
-    OR() : number
+    OR() : any
     {
         return (this.Num2 | this.Num1)
     }
-    NOR() : number
+    NOR() : any
     {
         return ~(this.Num2 | this.Num1)
     }
-    XOR() : number
+    XOR() : any
     {
         return (this.Num2 ^ this.Num1)
     }
-    XNOR() : number
+    XNOR() : any
     {
         return ~(this.Num2 ^ this.Num1)
     }
-    power() : number
+    power() : any
     {
         let ret = 1
             for(let i = 0 ; i < this.Num2 ; i++)  
@@ -74,58 +74,58 @@ class Calculator
             }
             return ret
     }
-    Min(num1 : number , num2 : number) : number
+    Min(num1 : number , num2 : number) : any
     {
         return Math.min(num1,num2);
     }
-    Max(num1 : number , num2 : number) : number
+    Max(num1 : number , num2 : number) : any
     {
         return Math.max(num1 , num2);
     }
 }
 
-let calci = new Calculator(5,2)
-var ret = calci.sum()
+let calc = new Calculatorr(5,2)
+var ret : any = calc.sum()
 console.log(ret)
 
-var ret = calci.sub()
+var ret : any = calc.sub()
 console.log(ret)
 
-var ret = calci.mul()
+var ret : any= calc.mul()
 console.log(ret)
 
-var ret = calci.div()
+var ret : any= calc.div()
 console.log(ret)
 
-var ret = calci.percentage()
+var ret : any = calc.percentage()
 console.log(ret)
 
-var ret = calci.profit_percentage()
+var ret : any = calc.profit_percentage()
 console.log(ret)
 
-var ret = calci.loss_percentage()
+var ret : any= calc.loss_percentage()
 console.log(ret)
 
-var ret = calci.AND()
+var ret : any = calc.AND()
 console.log(ret)
 
-var ret = calci.NAND()
+var ret : any = calc.NAND()
 console.log(ret)
 
-var ret = calci.OR()
+var ret : any = calc.OR()
 console.log(ret)
 
-var ret = calci.XOR()
+var ret : any = calc.XOR()
 console.log(ret)
 
-var ret = calci.OR()
+var ret : any = calc.OR()
 console.log(ret)
 
-var ret = calci.NOR()
+var ret : any = calc.NOR()
 console.log(ret)
 
-var ret = calci.Min(2,3)
+var ret : any= calc.Min(2,3)
 console.log(ret)
 
-var ret : number = calci.Max(5 ,-1)
+var ret : any = calc.Max(5 ,-1)
 console.log(ret)
